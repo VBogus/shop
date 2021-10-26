@@ -7,10 +7,11 @@ session_start();
 require_once ('config.php');
 require_once ('core/base/settings/internal_settings.php');
 
-
-set_include_path{get_include_path()
-    .PATH_SEPARATOR.'n1'
-    .PATH_SEPARATOR.'n1'
+function load1($class_name){
+    $class_name= str_replace('\\','/', $class_name);
+    include $class_name.'.php';
 }
-include 'n1/A.php';
-$a= new A();
+
+spl_autoload_register('load1');
+
+(new \n1\A());

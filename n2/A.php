@@ -1,11 +1,11 @@
 <?php
-namespace n1;
 
+namespace n2;
 class A
 {
 
     public function __construct()
     {
-     exit('I am n1 A');   
+     exit('I am n2 A');   
     }
 }
