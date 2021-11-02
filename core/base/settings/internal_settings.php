@@ -21,5 +21,11 @@ const USER_CSS_JS = [
     'scripts'=>[]
 ];
 
-$a=1;
-$b=2;
+function autoloadMainclasses($class_name){
+    $class_name= str_replace('\\','/', $class_name);
+    if (!@include_once $class_name.'.php')
+        throw new RouteException ('Не верное имя файла для подключения - '. $class_name);
+    )
+}
+
+spl_autoload_register('autoloadMainclasse');
