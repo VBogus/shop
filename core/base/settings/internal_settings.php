@@ -20,12 +20,12 @@ const USER_CSS_JS = [
     'styles'=>[],
     'scripts'=>[]
 ];
-
+use core\base\exceptions\RouteException;
 function autoloadMainclasses($class_name){
     $class_name= str_replace('\\','/', $class_name);
-    if (!@include_once $class_name.'.php')
+    if (!@include_once $class_name.'.php'){
         throw new RouteException ('Не верное имя файла для подключения - '. $class_name);
-    )
+    }
 }
 
-spl_autoload_register('autoloadMainclasse');
+spl_autoload_register('autoloadMainclasses');
