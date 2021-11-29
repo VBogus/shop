@@ -46,4 +46,12 @@ class Settings
         }
         return self::$_instance=new self;
     }
+    public function clueProperties($class){
+        $baseProperties=[];
+        foreach($this as $name=>$item){
+            $property=$class::get($name);
+            $baseProperties[$name]=$property;
+        }
+        exit();
+        }
 }
