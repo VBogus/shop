@@ -5,7 +5,7 @@ use core\base\settings\settings;
 
 class ShopSettings
 {
-    private $basesettings;
+    private $baseSettings;
     private $_instance;
 
     private $teplateArr=[
