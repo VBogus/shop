@@ -7,7 +7,12 @@ class ShopSettings
 {
     private $baseSettings;
     private $_instance;
-
+    private $routes=[
+        'plugins'=>[
+            'path'=>'core/plugins/',
+            'hrUrl'=>false,
+            'dir'=>false]
+        ];
     private $teplateArr=[
         'text'=>['price','short'],
         'textarea'=>['goods_content']
